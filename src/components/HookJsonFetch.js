@@ -3,12 +3,11 @@ import useJsonFetch from "./useJsonFetch";
 
 function HookJsonFetch({ url }) {
   const [data, error, loading] = useJsonFetch(url);
-  console.log('[data, error, loading] = '+ [data, error, loading]);
   return (
     <div className="ui segment">
-      {data && <p>'data.status = ' {data.status}</p>}
-      {loading && <p>'Loading = ' Loading</p>}
-      {error && <p>"Error = " Error</p>}
+      {data && <p> {data.status}</p>}
+      {loading && <p> Loading</p>}
+      {error && <p> Error</p>}
     </div>
   );
 }
